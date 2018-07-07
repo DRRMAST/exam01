@@ -12,7 +12,20 @@ marine::~marine()
 {
 	std::cout << "Aaaargh..." << std::endl;
 }
-
+marine& marine::operator=(marine const& u)
+{
+	if(this != &u)
+    {
+		this->name = u.name;
+		this->type = u.type;
+		this->posX = u.posX;
+		this->posY = u.posY;
+		this->dam = u.dam;
+		this->cHP = u.cHP;
+		this->mHP = u.mHP;
+	}
+	return *this;
+}
 void marine::move(int x,int y)
 {
 	this->posX = x;

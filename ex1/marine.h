@@ -7,6 +7,7 @@ class marine : public unit
 		marine(std::string const& n,int x,int y);
 		marine(marine const& u);
 		~marine();
+		marine& operator = (marine const& u);
 		void move(int x,int y);
 		void stimpack();
 	
